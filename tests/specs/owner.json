@@ -1,19 +1,17 @@
 [
   {
-    "name": "/owner",
+    "name": "/owner shows dashboard",
     "steps": [
       {
+        "send": { "text": "/owner" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Display aggregated usage metrics and alert statistics"
+              "text": "📊 <b>Owner Dashboard</b>\n\n<b>Users:</b> 0\n<b>Total alerts fired:</b> 0\n<b>Alerts last 24h:</b> 0\n"
             }
           }
-        ],
-        "send": {
-          "text": "/owner"
-        }
+        ]
       }
     ]
   }

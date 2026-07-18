@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Settings shows current preferences",
+    "steps": [
+      {
+        "send": { "callback": "settings:menu" },
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "⚙️ <b>Settings</b>\n\n<b>Timezone:</b> UTC\n<b>Quiet hours:</b> 23:00 - 7:00\n<b>Daily summary:</b> Not set\n"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
