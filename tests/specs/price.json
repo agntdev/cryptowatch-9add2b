@@ -1,19 +1,33 @@
 [
   {
-    "name": "/price",
+    "name": "/price shows watchlist prices",
     "steps": [
       {
+        "send": { "text": "/price" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Check current price of specified coin or full watchlist"
+              "text": "Your watchlist is empty — tap ➕ Add Coin to start tracking."
             }
           }
-        ],
-        "send": {
-          "text": "/price"
-        }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Price menu button shows watchlist prices",
+    "steps": [
+      {
+        "send": { "callback": "price:menu" },
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Your watchlist is empty — tap ➕ Add Coin to start tracking."
+            }
+          }
+        ]
       }
     ]
   }

@@ -1,19 +1,17 @@
 [
   {
-    "name": "Add Coin",
+    "name": "Add Coin shows ticker input prompt",
     "steps": [
       {
+        "send": { "callback": "watchlist:add" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Add new cryptocurrency to watchlist via button or typed ticker"
+              "text": "Type the ticker symbol or name of the cryptocurrency you want to track (e.g. BTC, ETH, Solana):"
             }
           }
-        ],
-        "send": {
-          "callback": "watchlist:add"
-        }
+        ]
       }
     ]
   }
